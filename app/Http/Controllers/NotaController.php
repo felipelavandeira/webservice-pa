@@ -12,8 +12,8 @@ class NotaController extends Controller
 {
     public function list($id)
     {
-       	$faltas = User::with('notas', 'notas.disciplina', 'faltas')->find($id);
-
+        $faltas = User::with('notas', 'notas.disciplina', 'faltas', 'faltas.disciplina')->find($id);
+        
 
         if(!$faltas) {
             return response()->json([

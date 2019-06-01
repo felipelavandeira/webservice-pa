@@ -33,4 +33,6 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::get('/cronogramas/{id}/', 'CursoController@cronograma');
     Route::get('/dia/{id}/{date}', 'UserController@data');
     Route::get('/faltas/{id}', 'NotaController@list');
+
+    Route::get('aula', 'AulaController@listDay');
 });
