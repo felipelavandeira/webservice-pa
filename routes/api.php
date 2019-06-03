@@ -32,7 +32,7 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::get('/alunos/{id}', 'UserController@show');
     Route::get('/cronogramas/{id}/', 'CursoController@cronograma');
     Route::get('/dia/{id}/{date}', 'UserController@data');
-    Route::get('/faltas/{id}', 'NotaController@list');
+    Route::post('/faltas/{id}', 'NotaController@list');
 
-    Route::get('aula', 'AulaController@listDay');
+    Route::post('aula', 'AulaController@listDay');
 });

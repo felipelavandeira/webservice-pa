@@ -25,8 +25,8 @@ class Disciplina extends Model
     public function aula(){
         return $this->hasOne('App\Aula');
     }
-    public function falta(){
-        return $this->hasOne('App\Falta');
+    public function faltas(){
+        return $this->hasMany('App\Falta');
     }
     public function notas(){
         return $this->hasMany('App\Nota');

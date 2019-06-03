@@ -23,6 +23,7 @@ class AulaController extends Controller
     	}
     	$aula = Aula::where('schedule', 'like', '%'.$request->data.'%')
     		->whereIn('disciplina_id', $disciplinas)
+    		->with('disciplina')
     		->get();
     	return response()->json($aula);
     }
